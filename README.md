@@ -77,6 +77,7 @@
 -   e.g. "Fix: Fixed navbar horizontal scrollbar bug"
 -   e.g. "Remove: Removed navbar background color"
 -   e.g. "Update: Changed navbar width"
+-   e.g. "Add: Added navbar langauges menu | Fix: Fixed navbar horizontal scrollbar bug | Update: Changed navbar width"
 
 ## Teamwork
 
