@@ -1,10 +1,12 @@
 import React from 'react';
+
 import './Example.scss';
+import './Example-media.scss';
 
 function Example() {
     return (
         <div className="example">
-            <p>Example</p>
+            <p className="example-intro">Example</p>
         </div>
     );
 }

@@ -1,4 +1,8 @@
 .example {
-    color: cyan;
-    font-size: 3rem;
+    text-align: center;
+    background-color: blueviolet;
+    &-intro {
+        color: cyan;
+        font-size: 3rem;
+    }
 }
