@@ -1,6 +1,6 @@
 const asyncPipe = (...funcs) => {
-    return (value) => {
-        funcs.reduce(async (acc, func) => await func(acc), value);
+    return async (value) => {
+        return await funcs.reduce(async (acc, func) => await func(acc), value);
     };
 };
 
