@@ -53,6 +53,8 @@
         -   Inside this folder put the Routes components e.g. "Home.jsx", which is the full page that will combine all the components. make sure to not style the pages, only style the components you import to the pages, pages should be pure.
     -   "styles" Folder
         -   Inside this folder you can find the general scss like "base" and "atomic", these scss files doesn't belong to any components, it's pure classes to use across the project.
+    -   "store" Folder
+        -   Inside this folder you can find Zustand stores, each store has its own dedicated folder with the mocking data
     -   "App.jsx" component
         -   According to the file name, it's the whole application.
     -   "AppRoutes.jsx" component
