@@ -1,5 +1,5 @@
-import Home from './pages/home/Home';
-import Test from './pages/test/Test';
+import Home from './pages/Home';
+import Test from './pages/Test';
 
 const AppRoutes = [
     {
