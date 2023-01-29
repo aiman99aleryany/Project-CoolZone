@@ -6,7 +6,7 @@ import './Example-media.scss';
 function Example() {
     return (
         <div className="example">
-            <p className="example-intro">Example</p>
+            <p className="example-intro">Example Intro</p>
         </div>
     );
 }
