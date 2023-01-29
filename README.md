@@ -11,7 +11,7 @@
 
 ## Coding Guidelines
 
-#### GENERAL Guidelines
+### GENERAL Guidelines
 
 -   If the code is not clear, write comments.
 -   Use camalCase when creating variables.
@@ -26,19 +26,113 @@
 -   Be consistent with variable, method, and class names.
 -   Be consistent with abbreviations.
 
-#### CSS/SCSS Guidelines
+### CSS/SCSS Guidelines
+
+-   Try to use semantic tags as much as possible instead of divs.
+-   Each component has his own dedicated scss file, the tag that wraps the component will start with
+    the name of the component.
+    e.g.
+
+```
+    // NavBar.jsx
+
+            import './NavBar.scss';
+
+            function NavBar() {
+                return (
+                    <nav className="navbar">
+                        <div className="navbar__spec">
+                        some Content
+                                <button className="navbar__spec-button">Click me!</button>
+                        </div>
+                        <div className="navbar__spec2"> some Content </div>
+                        <div className="navbar-spec3"> some Content </div>
+                        <div className="navbar-spec4"> some Content </div>
+                    </nav>
+                )
+            }
+
+    // NavBar.scss
+
+    // This is the wrapper
+    // all wrappers will have a unified max-width
+    .navbar {
+        max-width: `the unifed max width`;
+
+        &__spec {
+            display: flex;
+            justfiy-content: center;
+            align-items: center;
+
+            &-button {
+                padding: 1rem;
+            }
+        }
+    }
+
+```
+
+#### Naming convention
+
+-   BEM
+
+    -   Block -> `card`
+    -   Element -> `card__specs`
+    -   Modifier -> `card--big` or `card--small`
+    -   never use capital case letters in css classes.
+
+    e.g.
+
+    ```
+    /* Block */
+    .card {
+        // here are basic styles for the card
+        display: flex;
+
+        /* Element */
+        &__specs {
+            // here are the rules of an element of a card, lets say card__specs class is for a <p> tag
+            color: red;
+            border: 2px solid black;
+        }
+
+        &--big {
+            width: 100px;
+        }
+
+        &--small {
+            width: 200px;
+        }
+    }
+    ```
+
+#### Nesting:
+
+    -   Try not to go deeper than 3 levels
+
+    ```
+        .card {
+            &__specs {
+                &-button {
+                    padding: 1rem;
+                }
+            }
+        }
+    ```
+
+#### Never use the keyword `!important`
+
+#### Never use inline CSS
+
+### JAVASCRIPT Guidelines
 
 -   Will be added later
 
-#### JAVASCRIPT Guidelines
+### REACT Guidelines
 
 -   Will be added later
 
-#### REACT Guidelines
-
--   Will be added later
-
-#### FOLDER STRUCTURE Guidelines
+### FOLDER STRUCTURE Guidelines
 
 -   The Project contains 1 main folder "src", inside this folder the following:
     -   "components" Folder
