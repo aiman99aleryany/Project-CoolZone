@@ -9,6 +9,13 @@
 1.  Mobile First Design
 2.  Atomic Design
 
+## Application Architecture principles
+
+1. Modeling the Data First.
+    - How single entities should be represented and dealt with among the bigger picture.
+2. Front-End Development based on Mocking.
+3. Always pick the simple and easy way of doing things.
+
 ## Coding Guidelines
 
 ### GENERAL Guidelines
@@ -31,7 +38,7 @@
 -   Try to use semantic tags as much as possible instead of divs.
 -   Each component has his own dedicated scss file, the tag that wraps the component will start with
     the name of the component.
-    e.g.
+    -   e.g.
 
 ```
     // NavBar.jsx
@@ -59,6 +66,8 @@
     .navbar {
         max-width: `the unifed max width`;
 
+
+        // inner elements and designs.
         &__spec {
             display: flex;
             justfiy-content: center;
@@ -108,7 +117,7 @@
 
 #### Nesting:
 
-    -   Try not to go deeper than 3 levels
+-   Try not to go deeper than 3 levels
 
     ```
         .card {
@@ -126,11 +135,57 @@
 
 ### JAVASCRIPT Guidelines
 
--   Will be added later
+#### Naming convention
+
+-   Use camalCase with Variables, functions, classes, etc.
+-   If the function returns a boolean, start the name with "check" or "verify"
+-   Function names should indicate a verb (get, set, check, verify, pipe), while a Variable names should indicate a noun (users, planets, items) also you can use "is" for booleans (isLoggedIn, isDone)
+-   Keep the names short.
+
+#### The High order functions
+
+-   Always use the High order functions over the imperative programming
+    -   map
+    -   filter
+    -   reduce
 
 ### REACT Guidelines
 
--   Will be added later
+-   Never mix the logic with the representation, meaning:
+
+    -   e.g.1 Don't put jsx in variables
+
+    -   e.g.2 Don't return jsx from functions that are not components.
+
+    ```
+        //example 1
+        function Component() {
+            const hello = <h1> Hello World </h1>;
+
+            return (
+                <div>
+                    {
+                        hello
+                    }
+                </div>
+            )
+        }
+
+        //example 2
+        function Component() {
+            const render() {
+                return <h1> Hello World</h1>
+            }
+
+            return (
+                <div>
+                    {
+                        render()
+                    }
+                </div>
+            )
+        }
+    ```
 
 ### FOLDER STRUCTURE Guidelines
 
@@ -159,6 +214,13 @@
 ## Testing Components Design
 
 -   import components to Page "Test" if you want to test and see how the component looks alone.
+
+## Development Env Scripts
+
+-   'npm start' -> Start the server
+-   'npm run dev' -> Start the server and the watch the sass (styles folder)
+-   'npm run prettier' -> format the whole project
+-   'npm run lint' -> lint the whole project
 
 ## Git Branches naming convention
 
