@@ -218,7 +218,7 @@
 ## Development Env Scripts
 
 -   'npm start' -> Start the server
--   'npm run dev' -> Start the server and the watch the sass (styles folder)
+-   'npm run dev' -> Start the server and watch the sass (styles folder)
 -   'npm run prettier' -> format the whole project
 -   'npm run lint' -> lint the whole project
 
